@@ -1,36 +1,39 @@
-This package is a demo of an [astilectron](https://github.com/asticode/go-astilectron) app that uses the [bootstrap](https://github.com/asticode/go-astilectron-bootstrap) and the [bundler](https://github.com/asticode/go-astilectron-bundler).
+# Mouse and Keyboard Sharing based on Golang and Electron
 
-It's also the subject of this [blog post](https://medium.com/@social_57971/how-to-add-a-gui-to-your-golang-app-in-5-easy-steps-c25c99d4d8e0).
+!!! This is WIP and not Functional !!!
 
-![screenshot](screenshot.png)
+I dont know a good name yet, maybe go-harmony but anyway, this will be a try to rewrite
+a Keyboard and Mouse sharing service between mutliple PCs (mac/linux/win).
 
-# Step 1: install the demo
+This was initiated because of the messy development of https://github.com/symless/synergy-core with
+the decision to move to closed source for their GUI https://www.reddit.com/r/linux/comments/72gmua/synergy_20_goes_closed_source/.
 
-Run the following commands:
+### Features
 
-    $ go get -u github.com/asticode/go-astilectron-demo/...
-    $ rm $GOPATH/src/github.com/asticode/go-astilectron-demo/bind.go
+Still Thinking about them aswell as a name
 
-# Step 2: install the bundler
+## Development Setup
 
-Run the following command:
+Check your `$GOPATH` and don't forget to add `$GOPATH/bin` to your `$PATH`.
 
-    $ go get -u github.com/asticode/go-astilectron-bundler/...
-    
-And don't forget to add `$GOPATH/bin` to your `$PATH`.
-    
-# Step 3: bundle the app for your current environment
+#### Install Dependencies
+```
+go get -u github.com/asticode/go-astilectron/...
+go get -u github.com/asticode/go-astilectron-bootstrap/...
+go get -u github.com/asticode/go-astilectron-bundler/...
+go get -u github.com/asticode/go-astilog/...
+```
+#### Bundle/Compile the Application
 
-Run the following commands:
+1. Go to the root of the git repo
+2. run `astilectron-bundler -v`
 
-    $ cd $GOPATH/src/github.com/asticode/go-astilectron-demo
-    $ astilectron-bundler -v
-    
-# Step 4: test the app
+
+#### Execute the App
 
 The result is in the `output/<your os>-<your arch>` folder and is waiting for you to test it!
 
-# Step 5: bundle the app for more environments
+#### Deploy for more Environments
 
 To bundle the app for more environments, add an `environments` key to the bundler configuration (`bundler.json`):
 
@@ -41,4 +44,4 @@ To bundle the app for more environments, add an `environments` key to the bundle
 ]
 ```
 
-and repeat **step 3**.
+and repeat **Bundle/Compile the Application**.

@@ -18,6 +18,7 @@ import (
 func handleMessages(_ *astilectron.Window, m bootstrap.MessageIn) (payload interface{}, err error) {
 	switch m.Name {
 	case "explore":
+
 		// Unmarshal payload
 		var path string
 		if len(m.Payload) > 0 {
