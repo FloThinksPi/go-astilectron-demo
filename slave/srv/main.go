@@ -7,6 +7,7 @@ import (
 	"context"
 
 	hello "github.com/FloThinksPi/go-harmony/slave/svr/proto/hello"
+	micro "github.com/micro/go-micro"
 	"github.com/micro/go-micro/transport"
 )
 
