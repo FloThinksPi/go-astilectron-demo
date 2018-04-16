@@ -6,7 +6,7 @@ import (
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/transport"
 
-	hello "github.com/FloThinksPi/go-harmony/slave/svr/proto/hello"
+	hello "github.com/FloThinksPi/go-harmony/protocol/hello"
 
 	"context"
 )

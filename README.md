@@ -1,3 +1,7 @@
+# Dependencies cli
+
+sudo dnf install consul protobuf-compiler protobuf
+
 # Mouse and Keyboard Sharing based on Golang and Electron
 
 !!! This is WIP and not Functional !!!
